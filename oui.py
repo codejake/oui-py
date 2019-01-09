@@ -14,7 +14,7 @@ def usage():
 
     Usage: oui <mac address>
 
-    The MAC address can be in most any format of either 6 or 12 digits.
+    The MAC address can be in most any format of between 6 and 12 digits.
     Eg. aabb.ccdd.eeff, aa:bb:cc:dd:ee:ff, aa:bb:cc, aabb.c, etc.
 
     '''
