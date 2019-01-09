@@ -31,8 +31,7 @@ def get_oui_prefix(input):
 
 def get_mac_vendor(prefix):
     wireshark_oui_file_path = ("/Applications/Wireshark.app/Contents"
-                               "/Resources/share/wireshark/manuf"
-                               )
+                               "/Resources/share/wireshark/manuf")
 
     if not os.path.exists(wireshark_oui_file_path):
         print("I cannot find a Wireshark \"manuf\" file!")
@@ -47,21 +46,13 @@ def get_mac_vendor(prefix):
 
 
 def main():
-
     if len(sys.argv) != 2:
         print(usage())
         sys.exit(1)
 
     unclean_addr = sys.argv[1]
 
-    print("{}".format(
-        get_mac_vendor(
-            get_oui_prefix(
-                clean(unclean_addr)
-            )
-        )
-      )
-    )
+    print("{}".format(get_mac_vendor(get_oui_prefix(clean(unclean_addr)))))
 
 
 if __name__ == "__main__":
